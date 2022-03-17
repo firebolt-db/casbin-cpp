@@ -58,6 +58,11 @@ option(CASBIN_BUILD_BINDINGS "State whether to build language bindings" ON)
 option(CASBIN_BUILD_PYTHON_BINDINGS "State whether to build python bindings" ON)
 option(CASBIN_INSTALL "State whether to install casbin targets on the current system" ON)
 
+set(CASBIN_BUILD_TEST OFF)            # If you don't need to build tests for casbin
+set(CASBIN_BUILD_BENCHMARK OFF)       # If you don't need to build benchmarks for casbin
+set(CASBIN_BUILD_BINDINGS OFF)        # If you don't need language bindings provided by casbin
+set(CASBIN_BUILD_PYTHON_BINDINGS OFF) # If you don't need python bindings provided by casbin
+
 # Intrinsic directory paths
 set(CASBIN_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/casbin)
 set(CASBIN_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
@@ -91,7 +96,7 @@ set(CMAKE_CXX_STANDARD 17)
 # don't generally produce global targets. To guarantee all imported targets are 
 # global, this module is included at the project root level.
 
-include(FindExtPackages)
+# include(FindExtPackages)
 
 add_subdirectory(casbin)
 
