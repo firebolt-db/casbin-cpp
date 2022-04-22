@@ -47,6 +47,7 @@ set(CASBIN_SOURCE_FILES
     persist/file_adapter/batch_file_adapter.cpp
     persist/file_adapter/file_adapter.cpp
     persist/file_adapter/filtered_file_adapter.cpp
+    persist/file_adapter/stringstream_adapter.cpp
     persist/adapter.cpp
     persist/default_watcher.cpp
     persist/default_watcher_ex.cpp
