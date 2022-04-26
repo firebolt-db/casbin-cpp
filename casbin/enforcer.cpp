@@ -233,10 +233,10 @@ Enforcer::Enforcer(const std::shared_ptr<Model>& m, std::shared_ptr<Adapter> ada
         if(downcastedPtr)
         {
             // for StringstreamAdapter we load policy if we have bytes in stream
-            loadPolicyNow = m_adapter->m_policy_stringstream.rdbuf()->in_avail() > 0;
+            loadPolicyNow = (m_adapter->m_policy_stringstream.rdbuf()->in_avail() > 0);
         } else {
             // for other types of adapters we load policy if we have file path
-            loadPolicyNow = m_adapter->file_path != "";
+            loadPolicyNow = (m_adapter->file_path != "");
         }
 
         if (loadPolicyNow) {

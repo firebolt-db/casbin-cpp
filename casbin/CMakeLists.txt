@@ -74,7 +74,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_library(casbin STATIC ${CASBIN_SOURCE_FILES})
 
-target_precompile_headers(casbin PRIVATE pch.h)
 target_include_directories(casbin PRIVATE ${CASBIN_SOURCE_DIR})
 
 set_target_properties(casbin PROPERTIES 
