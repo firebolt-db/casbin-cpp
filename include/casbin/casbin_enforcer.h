@@ -207,6 +207,13 @@ namespace casbin {
          */
         Enforcer(const std::shared_ptr<Model>& m);
         /**
+         * Enforcer initializes an enforcer with a model and a policy string stream
+         *
+         * @param m the model.
+         * @param policy_file the path of the policy file.
+         */
+        Enforcer(const std::shared_ptr<Model>& m, std::stringstream && policy);
+        /**
          * Enforcer initializes an enforcer with a model file.
          *
          * @param model_path the path of the model file.

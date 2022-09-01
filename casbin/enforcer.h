@@ -93,6 +93,13 @@ class Enforcer : public IEnforcer {
          */
         Enforcer(const std::string& model_path);
         /**
+         * Enforcer initializes an enforcer with a model and a policy string stream
+         *
+         * @param m the model.
+         * @param policy_file the path of the policy file.
+         */
+        Enforcer(const std::shared_ptr<Model>& m, std::stringstream && policy);
+        /**
          * Enforcer initializes an enforcer with a model file, a policy file and an enable log flag.
          *
          * @param model_path the path of the model file.
